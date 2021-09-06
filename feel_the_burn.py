@@ -1,11 +1,11 @@
 #%%
 # AUTHOR:     Trent Brunson
 # COURSE:     ANLY 615
-# PROGRAM:    Triathlon fuel comsumption
-# PURPOSE:    This will return how many calories are burned (& weight lost) for a trio of execerises. 
+# PROGRAM:    Triathlon fuel consumption
+# PURPOSE:    This will return how many calories are burned (& weight lost) for a trio of exercises. 
 # INPUT:      Times for each of 3 activities: swim, bike & run.
 # PROCESS:    Use given values for caloric burn per activity.
-# OUTPUT:     How many minutes to achieve the desired temp.
+# OUTPUT:     Caloried burned and weight lost.
 # HONOR CODE: On my honor, as an Aggie, I have neither given 
 #             nor received unauthorized aid on this academic work.
 
@@ -14,7 +14,7 @@
 choice = "Y"
 
 print("*********************************************************************************\n"
-    "This program calculates how many calories you burned performing triathlon events.\n" + 
+    "This program calculates how many calories you burned performing triathlon events.\n" 
     "*********************************************************************************\n\n")
 
 while choice.upper() == "Y":
@@ -27,8 +27,8 @@ while choice.upper() == "Y":
         totalCalBurn = ((swimTime * 275 / 60) + (bikeTime * 200 / 60) + (runningTime * 475 / 60))
         weightLost = totalCalBurn / 3500
 
-        print(f"Your burned {int(round(totalCalBurn)):} calories and lost {weightLost:.2f} pounds.\n\n")
-        choice = input("Would you like to enter another workout/event? (Y/N)")
+        print(f"\nYou burned {int(round(totalCalBurn)):} calories and lost {weightLost:.2f} pounds.\n\n")
+        choice = input("Would you like to enter another workout/event? (Y/N) ")
 
     except ValueError:
         print("Only enter integers.  Please try again.")
