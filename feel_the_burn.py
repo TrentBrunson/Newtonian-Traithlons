@@ -18,14 +18,18 @@ print("*************************************************************************
     "*********************************************************************************\n\n")
 
 while choice.upper() == "Y":
-    swimTime = int(input("How long did you swim? (minutes)\t"))
-    bikeTime = int(input("How long did you bike? (minutes)\t"))
-    runningTime = int(input("How long did you run? (minutes)\t\t"))
-    
-    totalCalBurn = ((swimTime * 275 / 60) + (bikeTime * 200 / 60) + (runningTime * 475 / 60))
-    weightLost = totalCalBurn / 3500
 
-    print(f"Your burned {int(round(totalCalBurn)):} calories and lost {weightLost:.2f} pounds.\n\n")
+    try:
+        swimTime = int(input("How long did you swim? (minutes)\t"))
+        bikeTime = int(input("How long did you bike? (minutes)\t"))
+        runningTime = int(input("How long did you run? (minutes)\t\t"))
+        
+        totalCalBurn = ((swimTime * 275 / 60) + (bikeTime * 200 / 60) + (runningTime * 475 / 60))
+        weightLost = totalCalBurn / 3500
 
-    choice = input("Would you like to enter another workout/event? (Y/N)")
+        print(f"Your burned {int(round(totalCalBurn)):} calories and lost {weightLost:.2f} pounds.\n\n")
+        choice = input("Would you like to enter another workout/event? (Y/N)")
+
+    except ValueError:
+        print("Only enter integers.  Please try again.")
 # %%
