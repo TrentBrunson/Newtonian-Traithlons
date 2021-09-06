@@ -32,4 +32,4 @@ while choice.upper() == "Y":
 
     except ValueError:
         print("Only enter integers.  Please try again.")
-# %%
+        choice = "N"
