@@ -4,7 +4,7 @@
 # PROGRAM:    Newtonian rate of cooling
 # PURPOSE:    This will return how long takes for a liquid to cool to the desired temp. 
 # INPUT:      room temperature, current liquid temperature, and desired liquid temperature.
-# PROCESS:    The program plugs and chugs the proportinal rate of change.
+# PROCESS:    The program plugs and chugs the proportional rate of change.
 # OUTPUT:     How many minutes to achieve the desired temp.
 # HONOR CODE: On my honor, as an Aggie, I have neither given 
 #             nor received unauthorized aid on this academic work.
