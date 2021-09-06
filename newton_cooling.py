@@ -21,7 +21,7 @@ print("*************************************************************************
 
 while choice.upper() == "Y":
 
-    timer = 1 # init timer
+    timer = 0 # init timer
 
     try:
         roomTemp = float(input("What is the current room temperature?\t\t"))
@@ -38,11 +38,13 @@ while choice.upper() == "Y":
             while liquidTemp < desiredTemp:
                 liquidTemp -= (liquidTemp - roomTemp) * k
                 timer += 1
+                # print(timer, liquidTemp) #checking output
             print(f"Your drink will reach {liquidTemp:.2f} degrees after {timer} minutes./n")
         else:
             while liquidTemp > desiredTemp:
                 liquidTemp -= (liquidTemp - roomTemp) * k
                 timer += 1
+                # print(timer, liquidTemp) #checking output
             print(f"Your drink will reach {liquidTemp:.2f} degrees after {timer} minutes./n")
 
         choice = input("Would you like to try again? (Y/N) ")    
@@ -50,3 +52,4 @@ while choice.upper() == "Y":
     except ValueError:
         print("Input only numbers.")
         choice = "N" 
+# %%
